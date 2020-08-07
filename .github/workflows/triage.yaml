@@ -13,6 +13,7 @@ jobs:
 
     steps:
       - name: "Add labels based on branch name"
+        if: "github.event.name == 'opened'"
         uses: "actions/github-script@v2.0.0"
         with:
           github-token: "${{ secrets.ERGEBNIS_BOT_TOKEN }}"
